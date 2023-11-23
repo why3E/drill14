@@ -296,7 +296,6 @@ class Boy:
         sx = self.x - server.background.window_left
         sy = self.y - server.background.window_bottom
         self.image.clip_draw(int(self.frame)*100,self.action*100,100,100,sx,sy)
-        draw_rectangle(*self.get_bb())
         pass
 
     def get_bb(self):
