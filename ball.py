@@ -25,9 +25,7 @@ class Ball:
         pass
 
     def get_bb(self):
-        sx = self.x - server.background.window_left
-        sy = self.y - server.background.window_bottom
-        return sx - 10, sy - 10, sx + 10, sy + 10
+        return self.x - 10, self.y - 10, self.x + 10, self.y + 10
 
     def handle_collision(self, group, other):
         match group:
