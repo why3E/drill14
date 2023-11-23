@@ -296,10 +296,13 @@ class Boy:
         sx = self.x - server.background.window_left
         sy = self.y - server.background.window_bottom
         self.image.clip_draw(int(self.frame)*100,self.action*100,100,100,sx,sy)
+        draw_rectangle(*self.get_bb())
         pass
 
     def get_bb(self):
-        return self.x - 20, self.y - 50, self.x + 20, self.y + 50
+        sx = self.x - server.background.window_left
+        sy = self.y - server.background.window_bottom
+        return sx - 20, sy - 50, sx + 20, sy + 50
 
     # fill here
     def handle_collision(self, group, other):
